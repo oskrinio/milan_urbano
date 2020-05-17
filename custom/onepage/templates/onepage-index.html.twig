@@ -135,14 +135,16 @@
   </div>
 </section>
 <section id="google-maps">
-  <div class="box-content">
+  <div class="box-content clearfix">
     <div class="box-mapa">
       <img src="{{ file_url(form['#datos'][0].field_mapa_visitanos.entity.fileuri) }}" alt="Logo Milan Urbano" title="Logo Milan Urbano">
     </div>
     <div class="box-text">
-      <h3>Visitanos</h3>    
-      <h4><span>y/span><span>Conoce</span>Tu mejor </h4> 
-      <h5>Inversión</h5>
+      <div class="text-wrapper"> 
+        <h3>Visitanos</h3>    
+        <h4><span class="text01">y</span> <span class="color-white">Conoce</span>Tu mejor</h4> 
+        <h5>Inversión</h5>
+      </div>
     </div>
   </div>
 </section>
@@ -152,10 +154,10 @@
       <li id="icon-whatapps"><a>314 547 444</a></li>
       <li id="icon-phone"><a>(57+6) 892 2797</a></li>
     </ul>
-    <ul class="redes-sociales">
-      <li id="icon-instagram"><a></a></li>
-      <li id="icon-facebook"><a></a></li>
-      <li id="icon-twitter"><a></a></li>
+   <ul class="redes-sociales">
+      <li id="icon-instagram"><a href="#"><img src="{{ form['#path'] ~ 'icon_instagram.png' }}" alt="instagram milan urbano" title="instagram milan urbano"></a></li>
+      <li id="icon-facebook"><a href="#"><img src="{{ form['#path'] ~ 'icon_facebook.png' }}" alt="facebook milan urbano" title="facebook milan urbano"></a></li>
+      <li id="icon-youtube"><a href="#"><img src="{{ form['#path'] ~ 'icon_youtube.png' }}" alt="youtube milan urbano" title="youtube milan urbano"></a></li>
     </ul>
     <ul class="direccion">
       <li>Of. Principal: Carrera 23 No.70-20 / Sector Batallón</li>
@@ -163,5 +165,5 @@
     </ul>
   </div>
 </footer>
-
+<div id="bk-footer"></div>
 
