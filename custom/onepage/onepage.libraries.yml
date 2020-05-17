@@ -1,0 +1,16 @@
+onepage:
+    version: 1.2
+    js:
+        js/jquery-3.5.1.min.js: {}
+        js/slick.js: {}
+        js/millanurbanoGlobal.js: {}
+    css:
+        theme:
+            css/normalize.css: {}
+            css/slick.css: {}
+            css/slick-theme.css: {}
+            css/millanurbano_style.css: {}
+        
+
+        
+  

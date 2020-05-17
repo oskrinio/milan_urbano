@@ -1,0 +1,60 @@
+<?php
+
+/**
+* @file
+* Install, update and uninstall functions for the onepage module.
+*/
+use Drupal\Core\Database\Database;
+
+
+/**
+* Implements onepage_schema().
+*/
+
+function onepage_schema() {
+    $schema['onepage_user'] = [
+        'description' => 'Información de clientes interazados en el sitio',
+        'fields' => [
+           'id' => [
+                'type' => 'serial',
+                'not null' => TRUE,
+            ],
+            'nombre' => [
+                'type' => 'varchar',
+                'length' => 255,
+                'not null' => TRUE,
+                'description' => 'Nombre',
+                'not null' => TRUE,
+            ],
+            'email' =>[
+                'type' => 'varchar',
+                'length' => 255,
+                'not null' => TRUE,
+                'default' => '',
+                'description' => 'Email',
+            ],
+            'telefono' => [
+                'type' => 'numeric',
+                'not null' => TRUE,
+                'default' => 0,
+                'length' => '10',
+                'description' => 'Telefono',
+            ],
+            'terminos' => [
+                'type' => 'numeric',
+                'not null' => TRUE,
+                'default' => 0,
+                'length' => '1',
+                'description' => 'Terminos y condiciones',
+            ],
+        ],
+        'primary key' => ['id'],
+        'unique keys' =>[
+            'id' => ['id'],
+            'nombre' => ['nombre'],
+            'email' => ['email'],
+            'telefono' => ['telefono']
+        ]
+    ]; 
+    return $schema;
+}

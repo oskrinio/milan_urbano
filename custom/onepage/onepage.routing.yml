@@ -1,0 +1,20 @@
+onepage.index:
+  path: 'index/respuesta'
+  defaults:
+    _controller: '\Drupal\onepage\Controller\TksOnepage::View'
+    _title: 'Index'
+  requirements:
+    _permission: 'access content'
+  options:
+    no_cache: 'TRUE'
+
+onepage_form:
+  path: 'index'
+  defaults:
+    _title: 'Quiero Información '
+    _form: '\Drupal\onepage\Form\datosUsuario'
+  requirements:
+    _permission: 'access content'
+  options:
+    no_cache: 'TRUE'
+    

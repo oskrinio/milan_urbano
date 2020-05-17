@@ -1,0 +1,113 @@
+<?php
+
+/**
+* Implements hook_theme().
+*/
+
+function onepage_theme( $existing, $type, $theme, $path ) {
+    $theme = array(
+        'onepage-index' => array(
+            'render element' => 'form',
+            // 'variables' => [
+            //     'path' =>  NULL,
+            // ]
+            ),
+        'onepage-tks' => [],
+    );
+    return $theme;
+}
+
+/**
+* Implements hook_page_attachments().
+*/
+
+function onepage_page_attachments( array &$page ) {
+    $meta = [
+        '#tag' => 'meta',
+        '#attributes' => [
+            'name' => 'viewport',
+            'content' => 'width=device-width, initial-scale=1.0, maximum-scale=1',
+        ],
+    ];
+
+    $page['#attached']['html_head'][] = [$meta, 'viewport'];
+
+    $max_age = [
+        '#tag' => 'meta',
+        '#attributes' => [
+            'http-equiv' => 'cache-control',
+            'content' => 'max-age=0, no-cache',
+        ],
+    ];
+    $page['#attached']['html_head'][] = [$max_age, 'cache-control'];
+
+    $expires = [
+        '#tag' => 'meta',
+        '#attributes' => [
+            'http-equiv' => 'expires',
+            'content' => '0',
+        ],
+    ];
+    $page['#attached']['html_head'][] = [$expires, 'expires'];
+
+    $pragma = [
+        '#tag' => 'meta',
+        '#attributes' => [
+            'http-equiv' => 'pragma',
+            'content' => 'no-cache',
+        ],
+    ];
+    $page['#attached']['html_head'][] = [$pragma, 'pragma'];
+}
+
+/**
+* Implements hook_page_attachments_alter().
+*/
+
+function onepage_page_attachments_alter( &$attachments ) {
+    $current_path = \Drupal::service( 'path.current' )->getPath();
+    /* if (\Drupal::currentUser()->isAnonymous()) {
+        unset($attachments['#attached']['library']);
+        $attachments['#attached']['library'] = [
+          "contextual/drupal.contextual-links",
+        ];
+      } */
+  
+    
+   
+
+    switch ( $current_path ) {
+        case '/index':         
+            unset($attachments['#attached']['library']);
+            $attachments['#attached']['library'] = [
+            "contextual/drupal.contextual-links",
+            ];
+            $attachments['#attached']['library'][] ='onepage/onepage';
+        break;
+    }
+
+}
+
+
+/**
+ * Implements hook_preprocess_html().
+ */
+
+function onepage_preprocess_html(&$variables) {
+    $current_path = \Drupal::service('path.current')->getPath();
+    {
+      switch ($current_path ) {
+        case '/index':
+          $variables['attributes']['id'][] = "onepage-form";
+          break;
+      }
+    }
+  }
+  
+
+// /**
+//  * Implements hook_preprocess().
+//  */
+// function onepage_preprocess( &$variables, $hook ) {
+//   print_r( $variables );
+// }

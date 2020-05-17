@@ -1,0 +1,14 @@
+name: Image with Title
+type: module
+description: Display the image with title
+package: Other
+# version: VERSION
+core: 8.x
+core_version_requirement: ^8 || ^9
+dependencies:
+  - drupal:image
+
+# Information added by Drupal.org packaging script on 2020-04-29
+version: '8.x-2.0'
+project: 'image_with_title'
+datestamp: 1588168887

@@ -1,0 +1,194 @@
+{#
+/**
+ * @file
+ * Default theme implementation for an item list.
+ *
+ * Available variables:
+ *
+ * @see template_preprocess_template_directory()
+ *
+ * @ingroup themeable
+ */
+#}
+<section id="slider">
+  <div class="lightbox">
+    <div class="lb-images">
+      <div class="lb-slides">
+        {% for key, value in form["#datos"][0].field_slick_img %}
+          <div class="img-fill">
+            <img src="{{ file_url(value.entity.fileuri) }}" alt="Milan Urbano" title="Milan Urbano">
+          </div>
+        {% endfor %} #}
+      </div>
+    </div>
+  </div>
+  <div class="box-content">
+    <div id="logo">
+      <h1>Millan Urbano</h1>
+      <a href="/">
+        <img src="{{ form['#path'] ~ 'logo_milanUrbano.png' }}" alt="Logo Milan Urbano" title="Logo Milan Urbano">
+      </a>
+    </div>  
+    <div id="formulario">
+      <h2>Quiero información</h2>
+      {#get value field {{ form['#datos'][0].field_link_youtube.value}} #}
+      {#get url imagen {{ file_url(form['#datos'][0].field_tab_apartamentos.entity.fileuri) }} #}
+      {#get title imagen how html {{ form['#datos'][0].field_tab_apartamentos.title|raw}} #}
+      {# {% set cont = 0 %}
+      {% for key, value in form["#datos"][0].field_slick_img %}
+        Key : {{ key }}
+        count: {{cont}}
+        {% set cont = cont + 1 %}
+        img : {{ file_url(value.entity.fileuri) }}
+      {% endfor %} #}
+      
+      {{ form.nombre }}
+      {{ form.email }}
+      {{ form.telefono }}
+      {{ form.terminos }}
+      {{ form.form_build_id }}
+      {{ form.form_token }}
+      {{ form.form_id }}
+      {{ form.actions }}
+    </div>
+  </div>    
+</section>
+<section id="tabs">
+  <div class="box-content">
+    <div id="box-tabs" class="wrapper-tabs">
+      <div class="header-tabs">
+        <ul>
+          <li class="tab-active">
+            <a href="#ap">Apartamentos</a>
+          </li>
+          <li>
+            <a href="#of">Oficina</a>
+          </li>
+          <li>
+            <a href="#lc">Locales Comerciales</a>
+          </li>
+        </ul>
+      </div>
+      <div class="content-tabs">
+        <div id="ap" class="panel">
+          <div class="box-panel">
+            <img src="{{ file_url(form['#datos'][0].field_tab_apartamentos.entity.fileuri) }}" alt="Milan Urbano" title="Milan Urbano">
+            <div class="text">
+               <h3>{{ form['#datos'][0].field_tab_apartamentos.title|raw}}</h3>
+            </div>
+          </div>
+        </div>
+        <div id="of" class="panel">
+          <div class="box-panel">
+            <img src="{{ file_url(form['#datos'][0].field_tab_oficinas.entity.fileuri) }}" alt="Milan Urbano" title="Milan Urbano">
+            <div class="text">
+              <h3>{{ form['#datos'][0].field_tab_oficinas.title|raw}}</h3>
+            </div>
+          </div>
+        </div>
+        <div id="lc" class="panel" >
+          <div class="box-panel">
+            <img src="{{ file_url(form['#datos'][0].field_tab_locales.entity.fileuri) }}" alt="Milan Urbano" title="Milan Urbano">
+            <div class="text">
+              <h3>{{ form['#datos'][0].field_tab_locales.title|raw}}</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+</section>
+<section id="gallery">
+  <div class="box-content">
+    <div class="box-text">
+      <h3>Una Oportunidad </h3>    
+      <h4><span class="text01">Para </span> <span class="color-white"> Comenzar </span> Tu nuevo </h4> 
+      <h5>Estilo de vida</h5>
+    </div>
+    <div class="box-slider">
+      <div class="slider-gallery">
+        {% for key, value in form["#datos"][0].field_estilo_de_vida %}
+          {% if key %2 == 0 %}        
+        <div class="box-item">
+          <div class="item-element">
+            <img src="{{ file_url(value.entity.fileuri) }}" alt="Logo Milan Urbano" title="Logo Milan Urbano">
+          </div>
+          {% else %}
+          <div class="item-element">
+            <img src="{{ file_url(value.entity.fileuri) }}" alt="Logo Milan Urbano" title="Logo Milan Urbano">
+          </div>
+        </div>
+          {% endif %}
+        {% endfor %}
+
+
+
+        {# <div class="box-item">
+          <div class="item-element">
+            <img src="{{ form['#path'] ~ 'img_gallery01.png' }}" alt="Logo Milan Urbano" title="Logo Milan Urbano">
+          </div>
+          <div class="item-element">
+            <img src="{{ form['#path'] ~ 'img_gallery02.png' }}" alt="Logo Milan Urbano" title="Logo Milan Urbano">
+          </div>
+        </div>
+        <div class="box-item">
+          <div class="item-element">
+            <img src="{{ form['#path'] ~ 'img_gallery03.png' }}" alt="Logo Milan Urbano" title="Logo Milan Urbano">
+          </div>
+          <div class="item-element">
+            <img src="{{ form['#path'] ~ 'img_gallery04.png' }}" alt="Logo Milan Urbano" title="Logo Milan Urbano">
+          </div>
+        </div>
+        <div class="box-item">
+                    <div class="item-element">
+            <img src="{{ form['#path'] ~ 'img_gallery05.png' }}" alt="Logo Milan Urbano" title="Logo Milan Urbano">
+          </div>
+          <div class="item-element">
+            <img src="{{ form['#path'] ~ 'img_gallery06.png' }}" alt="Logo Milan Urbano" title="Logo Milan Urbano">
+          </div> #}
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="video-youtube">
+  <div class="box-content">
+    <div class="box-video">
+      <iframe width="560" height="315" src="{{ form['#datos'][0].field_link_youtube.value}}" 
+        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;
+          picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+<section id="google-maps">
+  <div class="box-content">
+    <div class="box-mapa">
+      <img src="{{ file_url(form['#datos'][0].field_mapa_visitanos.entity.fileuri) }}" alt="Logo Milan Urbano" title="Logo Milan Urbano">
+    </div>
+    <div class="box-text">
+      <h3>Visitanos</h3>    
+      <h4><span>y/span><span>Conoce</span>Tu mejor </h4> 
+      <h5>Inversión</h5>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="box-content">
+    <ul class="contacto">
+      <li id="icon-whatapps"><a>314 547 444</a></li>
+      <li id="icon-phone"><a>(57+6) 892 2797</a></li>
+    </ul>
+    <ul class="redes-sociales">
+      <li id="icon-instagram"><a></a></li>
+      <li id="icon-facebook"><a></a></li>
+      <li id="icon-twitter"><a></a></li>
+    </ul>
+    <ul class="direccion">
+      <li>Of. Principal: Carrera 23 No.70-20 / Sector Batallón</li>
+      <li>Manizales-colombia</li>
+    </ul>
+  </div>
+</footer>
+
+

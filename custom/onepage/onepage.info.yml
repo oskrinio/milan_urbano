@@ -1,0 +1,8 @@
+name: onepage
+description: Creates onepage.
+package: Custom
+
+type: module
+core: 8.x
+
+version: 1.0
