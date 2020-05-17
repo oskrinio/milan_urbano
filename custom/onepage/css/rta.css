@@ -1,0 +1,23 @@
+#onepage-form-respuesta #toolbar-administration,
+#onepage-form-respuesta #header,
+#onepage-form-respuesta .breadcrumb,
+#onepage-form-respuesta .site-footer,
+#onepage-form-respuesta .region-breadcrumb,
+#onepage-form-respuesta .content h1,
+#onepage-form #toolbar-administration,
+#onepage-form #header,
+#onepage-form .breadcrumb,
+#onepage-form .site-footer,
+#onepage-form .region-breadcrumb,
+#onepage-form .content h1,
+#onepage-form a.skip-link
+{
+    display: none;
+}
+
+#onepage-form input.error{
+    border: 2px solid red!important;
+}
+#onepage-form input#edit-submit{
+    cursor: pointer;
+}

@@ -66,16 +66,6 @@ function onepage_page_attachments( array &$page ) {
 
 function onepage_page_attachments_alter( &$attachments ) {
     $current_path = \Drupal::service( 'path.current' )->getPath();
-    /* if (\Drupal::currentUser()->isAnonymous()) {
-        unset($attachments['#attached']['library']);
-        $attachments['#attached']['library'] = [
-          "contextual/drupal.contextual-links",
-        ];
-      } */
-  
-    
-   
-
     switch ( $current_path ) {
         case '/index':         
             unset($attachments['#attached']['library']);
@@ -83,6 +73,11 @@ function onepage_page_attachments_alter( &$attachments ) {
             "contextual/drupal.contextual-links",
             ];
             $attachments['#attached']['library'][] ='onepage/onepage';
+        break;
+        case 'index/respuesta':
+            //unset($attachments['#attached']['library']);
+            $attachments['#attached']['library'][] = "contextual/drupal.contextual-links";
+            $attachments['#attached']['library'][] = "onepage/onepage.rta";
         break;
     }
 
@@ -94,14 +89,16 @@ function onepage_page_attachments_alter( &$attachments ) {
  */
 
 function onepage_preprocess_html(&$variables) {
-    $current_path = \Drupal::service('path.current')->getPath();
-    {
-      switch ($current_path ) {
-        case '/index':
-          $variables['attributes']['id'][] = "onepage-form";
-          break;
-      }
+    $current_path = \Drupal::service('path.current')->getPath();    
+    switch ($current_path ) {
+    case '/index':
+        $variables['attributes']['id'][] = "onepage-form";
+        break;
+    case '/index/respuesta':
+        $variables['attributes']['id'][] = "onepage-form-respuesta";
+        break;
     }
+    
   }
   
 

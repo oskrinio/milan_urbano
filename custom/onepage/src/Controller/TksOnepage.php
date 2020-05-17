@@ -35,9 +35,9 @@ class TksOnepage extends ControllerBase {
           '#theme' => 'onepage-tks',
           '#attached' => array(
               'library' => array(
-                'onepage/onepage',
+                'onepage/onepage.rta',
               ),
             ),      
-      ];
+      ];     
     }
 }

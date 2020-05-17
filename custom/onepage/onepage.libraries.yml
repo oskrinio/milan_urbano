@@ -7,10 +7,20 @@ onepage:
     css:
         theme:
             css/normalize.css: {}
+            css/rta.css: {} 
             css/slick.css: {}
             css/slick-theme.css: {}
             css/millanurbano_style.css: {}
-        
+
+onepage.rta:
+    version: 1.0
+    js:
+        js/jquery-3.5.1.min.js: {}
+        js/rta.js: {}
+    css:
+        theme:
+            css/normalize.css: {}
+            css/rta.css: {}        
 
         
   

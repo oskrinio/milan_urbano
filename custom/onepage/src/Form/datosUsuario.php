@@ -95,11 +95,7 @@ class datosUsuario extends FormBase {
     public function validateForm(array &$form, FormStateInterface $form_state) {
         if ($form_state->getValue('terminos') != 1) {
             $form_state->setErrorByName('Terminos', $this->t('Por favor acepte terminos y condiciones'));
-            // form_set_error('terminos', t('Por favor acepte terminos y condiciones'));
         }
-        // if ($form_state->getValue('age') < 18) {
-        // $form_state->setErrorByName('age', $this->t('Your age is under 18.'));
-        // }
     }
     /**
      * {@inheritdoc}
@@ -121,12 +117,14 @@ class datosUsuario extends FormBase {
                 'terminos' => $values['terminos'],
             ))
             ->execute();
-        
+        $url = Url::fromRoute('onepage.index');
+        $form_state->setRedirectUrl($url);
+        /* 
         drupal_set_message(t('Ok, the fields have been saved'));
 
         foreach ($form_state->getValues() as $key => $value) {
         drupal_set_message($key . ': ' . $value);
-        }
+        } */
     }
     public function getNodeInfo(){
         $entity_type ="content";
@@ -138,11 +136,7 @@ class datosUsuario extends FormBase {
         );
         $campo = $node->get('field_slick_img');
         $valor = $campo->getValue();
-        // return array($valor);
         return array($node);
-        return array($datos);
-        //print_r($node->get('field_link_youtube')->getValue()[0]["value"]);
-        // return $node;
         
 
     }
