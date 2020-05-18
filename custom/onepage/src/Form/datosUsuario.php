@@ -98,7 +98,7 @@ class datosUsuario extends FormBase {
     */
     public function validateForm(array &$form, FormStateInterface $form_state) {
         if ($form_state->getValue('terminos') != 1) {
-            $form_state->setErrorByName('Terminos', $this->t('Por favor acepte terminos y condiciones'));
+            $form_state->setErrorByName('Terminos', $this->t('Por favor acepte términos y condiciones'));
         }
     }
     /**

@@ -814,10 +814,7 @@ footer .box-content ul.direccion li{
 }
 
 /**** alerta***/
-#page-wrapper{
- position: relative;
-} 
-
+ 
 #page-wrapper .highlighted .messages__wrapper{
   position: absolute;
   left: 50%;
@@ -932,15 +929,21 @@ footer .box-content ul.direccion li{
 @media (max-width: 1024px) {
   #onepage-form-respuesta{
     background-position: -105px 0px;
+    min-height: 500px;
+  }
+
+  #onepage-form-respuesta #slider{
+    min-height: auto; 
   }
   #onepage-form-respuesta #main-wrapper #main{
     width: 92%;
     position: absolute;
     left: 30px;
-    top: 191px;
+    top: 138px;
     transform: translate(0%, 0%);
     -webkit-transform: translate(0%, 0%);
     z-index: 9;
+    margin:0;
   }
   #onepage-form-respuesta #main-wrapper h3 {
     font-size: 36px;
