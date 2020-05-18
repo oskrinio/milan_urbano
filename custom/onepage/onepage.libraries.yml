@@ -20,7 +20,8 @@ onepage.rta:
     css:
         theme:
             css/normalize.css: {}
-            css/rta.css: {}        
+            css/rta.css: {}
+            css/millanurbano_style.css: {}        
 
         
   

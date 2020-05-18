@@ -30,26 +30,28 @@
       </a>
     </div>  
     <div id="formulario">
-      <h2>Quiero información</h2>
-      {#get value field {{ form['#datos'][0].field_link_youtube.value}} #}
-      {#get url imagen {{ file_url(form['#datos'][0].field_tab_apartamentos.entity.fileuri) }} #}
-      {#get title imagen how html {{ form['#datos'][0].field_tab_apartamentos.title|raw}} #}
-      {# {% set cont = 0 %}
-      {% for key, value in form["#datos"][0].field_slick_img %}
-        Key : {{ key }}
-        count: {{cont}}
-        {% set cont = cont + 1 %}
-        img : {{ file_url(value.entity.fileuri) }}
-      {% endfor %} #}
-      
-      {{ form.nombre }}
-      {{ form.email }}
-      {{ form.telefono }}
-      {{ form.terminos }}
-      {{ form.form_build_id }}
-      {{ form.form_token }}
-      {{ form.form_id }}
-      {{ form.actions }}
+      <div class="box-formulario">
+        <h2>Quiero información</h2>
+        {#get value field {{ form['#datos'][0].field_link_youtube.value}} #}
+        {#get url imagen {{ file_url(form['#datos'][0].field_tab_apartamentos.entity.fileuri) }} #}
+        {#get title imagen how html {{ form['#datos'][0].field_tab_apartamentos.title|raw}} #}
+        {# {% set cont = 0 %}
+        {% for key, value in form["#datos"][0].field_slick_img %}
+          Key : {{ key }}
+          count: {{cont}}
+          {% set cont = cont + 1 %}
+          img : {{ file_url(value.entity.fileuri) }}
+        {% endfor %} #}
+        
+        {{ form.nombre }}
+        {{ form.email }}
+        {{ form.telefono }}
+        {{ form.terminos }}
+        {{ form.form_build_id }}
+        {{ form.form_token }}
+        {{ form.form_id }}
+        {{ form.actions }}
+      </div>  
     </div>
   </div>    
 </section>
@@ -136,16 +138,18 @@
 </section>
 <section id="google-maps">
   <div class="box-content clearfix">
-    <div class="box-mapa">
-      <img src="{{ file_url(form['#datos'][0].field_mapa_visitanos.entity.fileuri) }}" alt="Logo Milan Urbano" title="Logo Milan Urbano">
-    </div>
-    <div class="box-text">
-      <div class="text-wrapper"> 
-        <h3>Visitanos</h3>    
-        <h4><span class="text01">y</span> <span class="color-white">Conoce</span>Tu mejor</h4> 
-        <h5>Inversión</h5>
+    <div class="box-maps">
+      <div class="box-mapa">
+        <img src="{{ file_url(form['#datos'][0].field_mapa_visitanos.entity.fileuri) }}" alt="Logo Milan Urbano" title="Logo Milan Urbano">
       </div>
-    </div>
+      <div class="box-text">
+        <div class="text-wrapper"> 
+          <h3>Visitanos</h3>    
+          <h4><span class="text01">y</span> <span class="color-white">Conoce</span><br/>Tu mejor</h4> 
+          <h5>Inversión</h5>
+        </div>
+      </div>
+    </div>  
   </div>
 </section>
 <footer>
