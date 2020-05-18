@@ -22,14 +22,14 @@ class datosUsuario extends FormBase {
         $numberPhone = preg_replace($pattern, $substitute, $numberPhone);
         
         $form['nombre'] = [
-        '#type' => 'textfield',
-        '#maxlength' => 120,
-        '#title' => '',
-        '#title_display' => 'after',
-        '#required' => TRUE,
-        '#attributes' => [
-            'placeholder' => $this->t('NOMBRE COMPLETO'),
-            ],
+            '#type' => 'textfield',
+            '#maxlength' => 120,
+            '#title' => '',
+            '#title_display' => 'after',
+            '#required' => TRUE,
+            '#attributes' => [
+                'placeholder' => $this->t('NOMBRE COMPLETO'),
+                ],
         ];
 
         $form['email'] = array(
