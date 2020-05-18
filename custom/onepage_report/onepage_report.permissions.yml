@@ -1,0 +1,4 @@
+administer onepage_report:
+  title: 'Administrador OnePage report'
+  description: 'Configuraciones modulo onepageReport'
+  restrict access: true
