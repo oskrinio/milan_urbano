@@ -4,7 +4,6 @@ namespace Drupal\onepage_report\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 use Symfony\Component\HttpFoundation\Request;
-use Drupal\onepage_report\Model\reportDatabase;
 use Symfony\Component\HttpFoundation\Response;
 
 use Drupal\Core\Database\Connection;
@@ -30,10 +29,10 @@ class ReportCsv extends ControllerBase {
    * Devuelve los resultados de una consulta en un archivo descargable en
    * formato Csv para su manipulación.
    *
-   * @param Symfony\Component\HttpFoundation\Request $request
+   *
    *   Request informarion from Symfony packages.
    */
-  public function csv(Request $request = NULL) {
+  public function csv() {
     $results = $this->reportSQL();
     $headers = [
         'id' => 'id Registro',
