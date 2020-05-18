@@ -115,6 +115,7 @@ class datosUsuario extends FormBase {
                 'email' => $values['email'],
                 'telefono' => $values['telefono'],
                 'terminos' => $values['terminos'],
+                'date_register' => date("Y-m-d H:i:s"),
             ))
             ->execute();
         $url = Url::fromRoute('onepage.index');

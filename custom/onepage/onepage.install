@@ -47,6 +47,10 @@ function onepage_schema() {
                 'length' => '1',
                 'description' => 'Terminos y condiciones',
             ],
+            'date_register' => [
+                'mysql_type' => 'datetime',
+                'not null' => TRUE,
+            ],
         ],
         'primary key' => ['id'],
         'unique keys' =>[
@@ -58,3 +62,23 @@ function onepage_schema() {
     ]; 
     return $schema;
 }
+/**
+ * Implements hook_update().
+ */
+function onepage_update_8001() {
+  $schema = Database::getConnection()->schema();
+
+  $fields = [
+    'date_register' => [
+        'mysql_type' => 'datetime',
+        'not null' => TRUE,
+    ]
+  ];
+
+  foreach ($fields as $key => $field) {
+    if (!$schema->fieldExists('onepage_user', $key)) {
+      $schema->addField('onepage_user', $key, $field);
+    }
+  }
+}
+
