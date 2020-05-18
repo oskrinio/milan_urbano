@@ -142,7 +142,7 @@ class datosUsuario extends FormBase {
         $campo = $node->get('field_slick_img');
         $valor = $campo->getValue();
         return array(
-            "node" =>$node,
+            "node" =>array($node),
             "datos" =>$datos
         );
         
