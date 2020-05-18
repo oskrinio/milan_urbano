@@ -52,8 +52,12 @@ class datosUsuario extends FormBase {
                 'placeholder' => $this->t('TELÉFONO'),
             ]
         ];
+        $option = [
+            'attributes' => ['target' => '_blank'],
+        ];
 
-        $url = Url::fromUri('https://google.com/');
+        $datos = $this->getNodeInfo();
+        $url = Url::fromUri($datos["datos"]["field_link_terminos_y_condicione"], $option);
         $external_link = \Drupal::l(t('Aceptar Términos y condiciones'), $url);
 
         $form['terminos'] = [
@@ -67,7 +71,7 @@ class datosUsuario extends FormBase {
         $form['#theme'] = 'onepage-index';
         $form['#attached']['library'][] = 'onepage/onepage';
         $form['#path'] = drupal_get_path('module', 'onepage') . '/images/';
-        $form['#datos'] = $this->getNodeInfo();
+        $form['#datos'] = $datos["node"];
     
         $form['#attributes']['novalidate'] = '';
         $form['#attributes']['autocomplete'] = 'off';
@@ -133,11 +137,14 @@ class datosUsuario extends FormBase {
         $node_storage = \Drupal::entityManager()->getStorage('node');
         $node = $node_storage->load($nid);
         $datos = array(
-            "field_link_youtube" =>$node->get('field_link_youtube')->getValue()[0]["value"],
+            "field_link_terminos_y_condicione" =>$node->get('field_link_terminos_y_condicione')->getValue()[0]["value"],
         );
         $campo = $node->get('field_slick_img');
         $valor = $campo->getValue();
-        return array($node);
+        return array(
+            "node" =>$node,
+            "datos" =>$datos
+        );
         
 
     }

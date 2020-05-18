@@ -61,12 +61,7 @@ class ReportCsv extends ControllerBase {
       $output .= "\r\n";
     }
     $response = new Response();
-    // $response->headers->set('Content-Type', 'application/vnd.ms-excel');
-    // $response->headers->set('Content-Disposition', 'attachment; filename=reportUsers.csv');
-    // $response->headers->set('Expires', '0');
-    // $response->headers->set('Cache-Control', 'must-revalidate');
-    // $response->headers->set('Pragma', 'public');
-    $response->headers->set('Content-Type',   'application/vnd.ms-excel;  charset=utf-8');
+    $response->headers->set('Content-Type',   'application/vnd.ms-excel; charset=utf-8');
     $response->headers->set('Content-Disposition', 'attachment; filename=reportUsers.csv');
     $response->headers->set('Expires', '0');
     $response->headers->set('Cache-Control', 'must-revalidate, post-check=0, pre-check=0');
