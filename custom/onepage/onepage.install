@@ -52,13 +52,7 @@ function onepage_schema() {
                 'not null' => TRUE,
             ],
         ],
-        'primary key' => ['id'],
-        'unique keys' =>[
-            'id' => ['id'],
-            'nombre' => ['nombre'],
-            'email' => ['email'],
-            'telefono' => ['telefono']
-        ]
+        'primary key' => ['id'],        
     ]; 
     return $schema;
 }

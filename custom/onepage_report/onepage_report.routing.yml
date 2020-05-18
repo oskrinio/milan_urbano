@@ -1,5 +1,5 @@
 onepage_report.report_csv:
-  path: '/admin/report/csv'
+  path: 'admin/report/csv'
   defaults:
     _title: 'Report Table Csv'
     _controller: '\Drupal\onepage_report\Controller\ReportCsv::csv'

@@ -3,11 +3,12 @@
 namespace Drupal\onepage_report\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
+use Drupal\Core\Url;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
-
 use Drupal\Core\Database\Connection;
 use Drupal\Core\Database\Query\Condition;
+use Symfony\Component\HttpFoundation\Response;
 
 
 
@@ -22,6 +23,15 @@ class ReportCsv extends ControllerBase {
    * @var \Drupal\onepage_report\Model\reportDatabase
    */
   protected $reportDatabase;
+
+
+   
+    /**
+     * {@inheritdoc}
+     */
+    protected function getModuleName() {
+      return 'report_csv';
+  }
 
   /**
    * Generación de un reporte en Csv.
