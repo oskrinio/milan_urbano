@@ -87,7 +87,7 @@ a.visually-hidden.focusable.skip-link{
 }
 #slider .box-content #logo{
   float: left;
-  margin-top: 105px;
+  margin-top: 10px;
   margin-left: 10.5%;
 }
 
@@ -102,6 +102,112 @@ a.visually-hidden.focusable.skip-link{
 #slider .box-content #logo a{
   display: block;
 }
+
+#slider .box-content #logo .box-texto{
+  text-align: center;
+  margin-top: 40px;
+}
+
+#slider .box-content #logo .box-texto h3{
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 800;
+  display: block;
+  color: white;
+  margin: 0;
+}
+
+#slider .box-content #logo .box-texto h3.yellow{
+  color: #BAB15F;
+}
+
+#slider .box-content #logo .box-texto h4{
+  font-family: 'Raleway', sans-serif;
+  font-size: 38px;
+  line-height: 38px;
+  font-weight: 800;
+  display: block;
+  color:#BAB15F;
+  margin: 0;
+}
+
+#slider .box-content #logo .box-texto h4 span.text01{
+  font-size: 19px;
+  line-height: 19px;
+  color:white;
+  font-weight: 300;
+  position: relative;
+  top: -9px;
+}
+
+#slider .box-content #logo .box-texto h4 span.color-white{
+  color:white;
+  -webkit-border-radius: 23px 0px 0px 23px;
+  -moz-border-radius:  23px 0px 0px 23px;
+  border-radius:  23px 0px 0px 23px;
+}
+
+#slider .box-content #logo .box-texto h5{
+  font-family: 'Raleway', sans-serif;
+  font-size: 57px;
+  line-height: 57px;
+  color:#BAB15F;
+  -webkit-text-stroke: 2px #BAB15F; 
+  color: transparent;
+  margin: 0;
+  
+}
+
+#slider .box-content #box-barra{
+  clear: both;
+  width: 100%;
+  display: block;
+  text-align: center;
+  padding-top: 38px;
+  padding-bottom: 62px;
+  width: 78%;
+  margin: auto;
+  overflow: hidden;
+}
+
+#slider .box-content #box-barra .box-label01{
+  background-color: #BAB15F;
+  display: inline-block;
+  -webkit-border-radius: 23px 0px 0px 23px;
+  -moz-border-radius:  23px 0px 0px 23px;
+  border-radius:  23px 0px 0px 23px;
+  width: 50%;
+  padding: 5px 0;
+  float: left;
+}
+#slider .box-content #box-barra .box-label01 p{
+  font-family: 'Raleway', sans-serif;
+  font-size: 23px;
+  line-height: 24px;
+  color:white;
+  margin: 0;
+}
+
+#slider .box-content #box-barra .box-label02{
+  background-color: white;
+  display: inline-block;
+  -webkit-border-radius: 0px 23px 23px 0px;
+  -moz-border-radius:  0px 23px 23px 0px;
+  border-radius:  0px 23px 23px 0px;
+  width: 50%;
+  padding: 5px 0;
+  float: right;
+}
+#slider .box-content #box-barra .box-label02 p{
+  font-family: 'Raleway', sans-serif;
+  font-size: 23px;
+  line-height: 24px;
+  color:#BAB15F;
+  margin: 0;
+}
+
+
 #slider .box-content #formulario{
   float: right;
   background-color: white; 
@@ -112,7 +218,6 @@ a.visually-hidden.focusable.skip-link{
   max-width: 454px;
   width: 100%;
   margin-top: 72px;
-  min-height: 320px;
   min-height: 320px;
   margin-right: 5%;
 }
@@ -227,7 +332,7 @@ a.visually-hidden.focusable.skip-link{
 
 @media (max-width: 1024px) {
   #slider{
-    min-height: 812px;
+    min-height: 894px;
   }
   #slider .box-content #logo{
     float: none;
@@ -254,6 +359,51 @@ a.visually-hidden.focusable.skip-link{
   #slider .box-content #formulario .form-item input.form-number{
     width: 86%;
   }
+  #slider .box-content #logo .box-texto{
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  #slider .box-content #logo .box-texto h3{
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 800;
+    display: block;
+    color: white;
+    margin: 0;
+  }
+  
+ 
+  #slider .box-content #logo .box-texto h4{
+    font-size: 23px;
+    line-height: 23px;
+  }
+
+  #slider .box-content #logo .box-texto h4 span.text01{
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  #slider .box-content #logo .box-texto h5{
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  #slider .box-content #box-barra .box-label01, #slider .box-content #box-barra .box-label02{
+    float: none;
+    width: 100%;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    
+  }
+
+  #slider .box-content #box-barra .box-label01 p, #slider .box-content #box-barra .box-label02 p{
+    font-size: 16px;
+    line-height: 16px;
+  }
+  
 }
 
 /**** sección tabs ***/
@@ -299,7 +449,7 @@ a.visually-hidden.focusable.skip-link{
   padding: 0px 22px;
   font-family: 'Raleway', sans-serif;
   color:#BAB15F;
-  font-size: 30px;
+  font-size:28px;
   line-height: 44px;
   font-weight: 700;
 }
@@ -417,8 +567,10 @@ a.visually-hidden.focusable.skip-link{
 #gallery .box-content .box-text h3{
   font-family: 'Raleway', sans-serif;
   color:#BAB15F;
-  font-size: 53px; 
-  line-height: 48px;
+  -webkit-text-stroke: 2px #BAB15F; 
+  color: transparent;
+  font-size: 78px; 
+  line-height: 78px;
   font-weight: 900;
   display: block;
   margin: 0; 
@@ -428,9 +580,20 @@ a.visually-hidden.focusable.skip-link{
 #gallery .box-content .box-text h4{
   font-family: 'Raleway', sans-serif;
   color:#BAB15F;
-  font-size: 68px; 
-  line-height: 62px; 
+  font-size: 48px; 
+  line-height: 48px; 
   font-weight: 900; 
+  display: block;
+  margin: 0;
+  text-transform: uppercase
+}
+
+#gallery .box-content .box-text h4.txt{
+  font-family: 'Raleway', sans-serif;
+  color:white;
+  font-size: 48px; 
+  line-height: 48px; 
+  font-weight: 400; 
   display: block;
   margin: 0;
   text-transform: uppercase
@@ -460,8 +623,8 @@ a.visually-hidden.focusable.skip-link{
 
 #gallery .box-content .box-text h5{
   font-family: 'Raleway', sans-serif;
-  font-size: 103px;
-  line-height: 90px;
+  font-size: 57px;
+  line-height: 57px;
   color:#BAB15F;
   -webkit-text-stroke: 2px #BAB15F; 
   color: transparent;
@@ -514,14 +677,19 @@ a.visually-hidden.focusable.skip-link{
 @media (max-width: 1024px) {
   #gallery .box-content .box-text {
     width: 91%;
+    margin: 0 auto 50px;
   }
   #gallery .box-content .box-text h3{
     font-size: 26px;
     line-height: 30px;
   }
   #gallery .box-content .box-text h4{
-    font-size: 24px;
+    font-size: 23px;
     line-height: 20px;
+  }
+  #gallery .box-content .box-text h4.txt{
+    font-size: 22px;
+    line-height: 22px;
   }
   #gallery .box-content .box-text h4 span.text01{
     top: -5px;
@@ -533,8 +701,8 @@ a.visually-hidden.focusable.skip-link{
     line-height: 22px;
   }
   #gallery .box-content .box-text h5{
-    font-size: 35px;
-    line-height: 35px;
+    font-size: 22px;
+    line-height: 22px;
   }
   #gallery .box-content .box-slider .box-item{
     flex-direction: column;
@@ -599,7 +767,7 @@ a.visually-hidden.focusable.skip-link{
 }
 
 #google-maps .box-content .box-mapa img{
-  max-width: 590px;
+  max-width: 586px;
   width: 100%;
   height: auto;
 }
@@ -792,6 +960,7 @@ footer .box-content ul.direccion li{
   bottom: -18px;
   left: 0;
   width: 100%;
+  z-index: -1;
 }
 @media (max-width: 1024px) {
   footer .box-content{
@@ -804,6 +973,8 @@ footer .box-content ul.direccion li{
   footer .box-content ul li a{
     font-size: 13px;
     line-height: 38px;
+    cursor: pointer;
+    text-decoration: none !important;
   }
   footer .box-content ul li#icon-whatapps,
   footer .box-content ul li#icon-phone{

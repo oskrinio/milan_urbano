@@ -28,7 +28,7 @@ class datosUsuario extends FormBase {
             '#title_display' => 'after',
             '#required' => TRUE,
             '#attributes' => [
-                'placeholder' => $this->t('NOMBRE COMPLETO'),
+                'placeholder' => $this->t('Nombre Completo'),
                 ],
         ];
 
@@ -38,7 +38,7 @@ class datosUsuario extends FormBase {
             '#title_display' => 'after',
             '#required' => TRUE,
             '#attributes' => [
-                'placeholder' => $this->t('CORREO ELECTRONICO'),
+                'placeholder' => $this->t('Correo Electrónico'),
             ]
           );
     
@@ -49,7 +49,7 @@ class datosUsuario extends FormBase {
             '#title_display' => 'after',
             '#required' => TRUE,
             '#attributes' => [
-                'placeholder' => $this->t('TELÉFONO'),
+                'placeholder' => $this->t('Teléfono'),
             ]
         ];
         $option = [
